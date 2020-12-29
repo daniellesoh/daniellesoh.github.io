@@ -61,15 +61,15 @@ h1,h2,h3{
 	background-color: #2F4F4F;
 }
 
+.websitetemplate{
+	width: 400px;
+	height: auto;
+}
+
 img{
 	width: 300px;
 	height:auto; 
 	padding-bottom:10px;
-}
-
-.websitetemplate{
-	width: 400px;
-	height: auto;
 }
 
 td{
