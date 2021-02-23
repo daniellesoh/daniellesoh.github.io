@@ -51,7 +51,7 @@
 				<p>
 					<ol>
 						<li>Connect your components like the picture shown below:</li>
-						<img src="LEDcontrolcircuit.png" width="400px" height="auto">
+						<img src="../images/LEDcontrolcircuit.png" width="400px" height="auto">
 						<li>Connect your USB port to your device (laptop, computer, etc)</li>
 					</ol>
 				</p>
@@ -60,19 +60,95 @@
 				<p>
 					<ol>
 						<li>Using the Arduino software, click on the open icon and upload the blink code under “01.Basics”</li>
-						<img src="ledcode1.png" width="400px" height="auto">
+						<img src="../images/ledcode1.png" width="400px" height="auto">
 						<li>From the code, setup the pins that you are using, I used pin 8 so my pin values are 8 here:</li>
-						<img src="ledcode2.png" width="400px" height="auto">
+						<img src="../images/ledcode2.png" width="400px" height="auto">
 						<li>After that, input the time value you want for the LED to on and off. In the software, we use milliseconds. One second is equals to 1000 milliseconds. 
 						</li>
 						<li>Here, the LED should turn on for one second and off for one second.</li>
 						<li>Play around with the time values. For the second timing, I made the intervals shorter as shown here below:</li>
-						<img src="ledcode3.png" width="400px" height="auto">
+						<img src="../images/ledcode3.png" width="400px" height="auto">
 					</ol>
 				</p>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/3rmIId8YQBA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				
 
+
+				<h3>Task 2: Controlling 2 LEDs using a switch</h3>
+				<p>
+					Continuing on from task 1, add on these components:
+					<ul>
+						<li>3 jumper wires</li>	
+						<li>1 220ohm resistor</li>	
+						<li>1 1kiloohm resistor (orange, black, brown stripes)</li>	
+						<li>Different coloured LED (I used green) </li>
+						<li>Pushbutton Switch</li>
+					</ul>
+				</p>
+				<p>
+					<ol>
+						<li>Connect in the same arrangement as the previous one just using a different pin. For me, I used pin 7.</li>
+				
+						<li>Connect the rest of your components to the picture shown below:</li>
+					</ol>
+
+					<ul>
+						<li>I used pin 6 for the pushbutton switch</li>
+						<li>Connect your last jumper wire from the same column as your pushbutton switch to ground in your breadboard</li>
+					</ul>
+
+					Your arrangement should look something like this:
+					<img src="../images/switchcode1.png" width="500px" height="auto">
+				</p>
+
+				<h3>Coding Process</h3>
+				<p>
+					<img src="../images/switchcode2.png" width="400px" height="auto">
+				</p>
+				<p>
+					<ol>
+						<li>You need to setup your constant functions as in those that will not change. This will help you to code easier by using those function names.</li>
+						<li>In this case, the button will be the one reading thus it should be INPUT whereas for the LEDs, there would be the outputs.</li>
+						<li>“state = 0” means that we are assigning a value of 0 to the function “state”
+						</li>
+					
+					<p>
+						<img src="../images/switchcode3.png" width="400px" height="auto">
+					</p>
+
+					<p>
+						<img src="../images/switchcode4.png" width="400px" height="auto">
+					</p>
+
+						<li>I am using state to show what I want to happen in different cases.</li>
+						</ol>
+					<p>
+						<ul>
+							<li>Case 0: LEDred is off, LEDgreen is off as well</li>
+							<li>(Press)</li>
+							<li>Case 1: LEDred is on, LEDgreen is off</li>
+							<li>(Press)</li>
+							<li>Case 2: LEDred is off, LEDgreen is on</li>
+							<li>(Press)</li>
+							<li>Case 3: LEDred and LEDgreen is on</li>
+							<li>(Press-> goes back to Case 0)</li>
+						</ul>
+					</p>
+
+				<h3>Task 3: Flashing LEDs using switch</h3>
+					<p>
+						<img src="../images/flashcode1.png" width="400px" height="auto">
+					</p>
+					<p>
+						<img src="../images/flashcode2.png" width="400px" height="auto">
+					</p>
+					<p>
+						Demonstration
+					</p>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/3rmIId8YQBA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+				<h3>Challenges</h3>
+					<p>I had a hard time trying to figure out the code on my own for the switch control part of the assignment. However, after asking for my teacher’s help, I learnt a lot of new things like how to use the state function to execute a sequence of cases. One challenge I also faced was that every time I pressed the button, it would jump and execute the next case even though it had not executed the previous one. This is called bouncing: It is when two metal parts come into contact to short the supply.
+					This thus creates a false triggering or multiple triggering like the button is pressed multiple times.</p>
+				
 			</div>
 
 			</div>
