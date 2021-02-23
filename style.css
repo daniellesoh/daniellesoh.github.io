@@ -73,6 +73,10 @@ td{
 	padding-left: 10px; 
 }
 
+iframe{
+		margin-bottom: 10px;
+}
+
 #footer{
 	clear: both;
 	margin-top: 30px;
